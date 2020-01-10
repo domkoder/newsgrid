@@ -144,6 +144,10 @@ h6 {
   color: #fff;
 }
 
+.l-heading {
+  font-size: 3rem;
+}
+
 .py-1 {
   padding: 1.5rem 0;
 }
@@ -165,12 +169,24 @@ h6 {
 
 .list li {
   padding: 0.5rem 0;
-  border-bottom: #555 dotted 1px;
+  border-bottom: 2px #555 dotted;
   width: 90%;
 }
 
 .list li a:hover {
   color: var(--primary-color) !important;
+}
+
+/* Inner page grid container  */
+.page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  grid-gap: 1.5rem;
+}
+
+.page-container > *:first-child {
+  grid-row: 1 / span 3;
 }
 
 /* Navigation */
@@ -275,6 +291,18 @@ h6 {
 #home-articles .articles-container > *:last-child {
   grid-column: 2 / span 2;
 }
+/* Article */
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.5rem;
+}
+
+#article .meta .category {
+  margin-top: 0.4rem;
+}
 
 /* Footer */
 #main-footer {
@@ -302,6 +330,7 @@ h6 {
   padding: 0.5rem;
   text-align: center;
   font-size: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 #main-footer .footer-container input[type='email'] {
